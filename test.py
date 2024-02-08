@@ -8,3 +8,4 @@ import pandas as pd
 
 st.image("gif.gif")
 st.image("gif2.gif")
+st.image("gif3.gif")
