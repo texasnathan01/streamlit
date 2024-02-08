@@ -9,8 +9,9 @@ import pandas as pd
 st.markdown("![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)")
 
 df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
+  'first column': [1, 2, 3, 4, 5],
+  'second column': [10, 20, 30, 40, 50]
 })
+
 
 df
