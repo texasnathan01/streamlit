@@ -74,4 +74,110 @@ doom_string_2 = """
 doom_string_3 = """"""
 
 
-html(doom_string_2, width=640, height=400)
+#html(doom_string_2, width=640, height=400)
+
+
+doom_string_4 = """
+ <!doctype html>
+ <html lang="en-us">
+   <head>
+     <meta charset="utf-8">
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <title>DOOM</title>
+     <style type="text/css">
+       .dosbox-container { width: 320px; height: 200px; }
+       .dosbox-container > .dosbox-overlay { background: url(https://js-dos.com/cdn/DOOM.png); }
+     </style>
+   </head>
+   <body>
+     <div id="dosbox"></div>
+     <br/>
+     <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+     
+     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
+     <script type="text/javascript">
+       var dosbox = new Dosbox({
+         id: "dosbox",
+         onload: function (dosbox) {
+           dosbox.run("./Doom/DOOM-@evilution.zip", "C ./DOOM.exe");
+         },
+         onrun: function (dosbox, app) {
+           console.log("App '" + app + "' is runned");
+         }
+       });
+     </script>
+   </body>
+ </html>
+"""
+
+
+#html(doom_string_4, width=640, height=400)
+
+
+doom_string_5 = """
+ <!doctype html>
+   <html lang="en-us">
+     <head>
+       <meta charset="utf-8">
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+       <title>js-dos api</title>
+       <style type="text/css">
+         .dosbox-container { width: 640px; height: 400px; }
+       </style>
+     </head>
+     <body>
+       <div id="dosbox"></div>
+       <br/>
+       <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+       
+       <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
+       <script type="text/javascript">
+         var dosbox = new Dosbox({
+           id: "dosbox",
+           onload: function (dosbox) {
+             dosbox.run("https://js-dos.com/cdn/digger.zip", "./DIGGER.COM");
+           },
+           onrun: function (dosbox, app) {
+             console.log("App '" + app + "' is runned");
+           }
+         });
+       </script>
+     </body>
+   </html>
+   """
+   
+# html(doom_string_5, width=640, height=400)
+
+doom_string_6 = """
+ <!doctype html>
+ <html lang="en-us">
+   <head>
+     <meta charset="utf-8">
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <title>DOOM</title>
+     <style type="text/css">
+       .dosbox-container { width: 320px; height: 200px; }
+     </style>
+   </head>
+   <body>
+     <div id="dosbox"></div>
+     <br/>
+     <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+    
+     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
+     <script type="text/javascript">
+       var dosbox = new Dosbox({
+         id: "dosbox",
+         onload: function (dosbox) {
+           dosbox.run("https://js-dos.com/cdn/upload/DOOM-@evilution.zip", "./DOOM/DOOM.EXE");
+         },
+         onrun: function (dosbox, app) {
+           console.log("App '" + app + "' is runned");
+         }
+       });
+     </script>
+   </body>
+ </html>
+"""
+
+html(doom_string_6, width=640, height=400)
