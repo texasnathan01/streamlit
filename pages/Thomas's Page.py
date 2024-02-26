@@ -1,35 +1,28 @@
 import streamlit as st
 from streamlit.components.v1 import html
 
+st.set_page_config(page_title='Can it run Doom?', page_icon="data:image/jpeg;base64,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")
+
 doom_string = """
    <head>
      <meta charset="utf-8">
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
      <title>DOOM</title>
      <style type="text/css">
-       .dosbox-container { width: 320px; height: 200px; margin: auto;}
-       .dosbox-container > .dosbox-overlay { background: url(https://web.archive.org/web/20240219141702/https://js-dos.com/cdn/DOOM.png); }
+       .dosbox-container { width: 640px; height: 400px;}
      </style>
    </head>
    <body>
      <div id="dosbox"></div>
      <br/>
      <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
-     
-     <script type="text/javascript" src="https://web.archive.org/web/20240219141703/https://js-dos.com/cdn/js-dos-api.js"></script>
-     <style>
-         canvas {
-             width: 100%;
-             height: 100%;
-             margin: auto;
-             padding: 0;
-         }
-     </style>
+    
+     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
      <script type="text/javascript">
        var dosbox = new Dosbox({
          id: "dosbox",
          onload: function (dosbox) {
-           dosbox.run("https://web.archive.org/web/20230924174938/https://js-dos.com/cdn/upload/DOOM-@evilution.zip", "./Doom.exe");
+           dosbox.run("https://js-dos.com/cdn/upload/DOOM-@evilution.zip", "./DOOM/DOOM.EXE");
          },
          onrun: function (dosbox, app) {
            console.log("App '" + app + "' is runned");
@@ -39,39 +32,22 @@ doom_string = """
    </body>
 """
 
-"""dosbox.run("./Doom/DOOM-@evilution.zip", "./Doom/DOOM-@evilution/DOOM");"""
+st.markdown("<h1 style='text-align: center; color: black;'>Can it run <font color=red>DOOM</font>?</h1>", unsafe_allow_html=True)
+
+html(doom_string, width=640, height=400)
 
 
-#html(doom_string, width=320, height=200)
+st.markdown("""
+    <h3 id="controls">Controls:</h3>
+    <ul>
+        <li>Move: UP, DOWN, LEFT, RIGHT</li>
+        <li>Use: W</li>
+        <li>Fire: S</li>
+        <li>Speed on: SPACE</li>
+        <li>Strafe on: ALT</li>
+        <li>Strafe: A, D</li>
+        <li>Menu Select: Enter</li>
+    </ul>
+""", unsafe_allow_html=True)
 
-doom_string_2 = """
-<head>
- <meta charset="utf-8">
-  <title>Digger js-dos 6.22</title>
-  <script src="https://web.archive.org/web/20240112092319/https://js-dos.com/6.22/current/js-dos.js"></script>
-  <style>
-  canvas {
-     width: 640px;
-     height: 400px;
-   }
- </style>
-</head>
-
-<body>
-  <canvas id="jsdos"></canvas>
-  <script>
-   Dos(document.getElementById("jsdos"), { 
-      wdosboxUrl: "https://web.archive.org/web/20240121122727/https://js-dos.com/6.22/current/wdosbox.js" 
-      }).ready((fs, main) => {
-  fs.extract("https://web.archive.org/web/20230924174938/https://js-dos.com/cdn/upload/DOOM-@evilution.zip").then(() => {
-     main(["./Doom"])
-     });
-    });
-  </script>
-  </body>
-"""
-
-doom_string_3 = """"""
-
-
-html(doom_string_2, width=640, height=400)
+st.markdown('<p></p><p style="text-align: left">"It Runs Doom" is an expression indicating that a device is capable of running the 1993 first-person shooter video game Doom, which has been successfully ported to a variety of electronic gadgets designed for purposes other than gaming.</p>', unsafe_allow_html=True)
