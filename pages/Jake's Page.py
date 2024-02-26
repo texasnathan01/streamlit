@@ -6,6 +6,8 @@ from skimage.transform import swirl
 from skimage.color import rgb2gray
 from PIL import Image
 
+st.text_input("Camera Number: ")
+
 def get_video(swirl_strength, threshold, edge):
 
     while cap.isOpened() and not stop_button_pressed:
