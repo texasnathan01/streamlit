@@ -6,6 +6,6 @@ beautifulsoup4==4.12.3
 lxml==5.1.0
 folium==0.15.1
 streamlit-folium==0.18.0
-opencv-python==4.9.0
+opencv-python==4.9.0.80
 pillow==10.2.0
 scikit-image==0.22.0
