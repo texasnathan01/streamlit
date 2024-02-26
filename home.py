@@ -3,6 +3,7 @@ import pandas as pd
 
 st.write("""
 # Howdy! Welcome to our streamlit application
+<<<<<<< HEAD
 """)
 
 st.header("Instructional Items")
@@ -41,3 +42,9 @@ st.write("""Objectives: This YouTube tutorial is built around practical applicat
 \nEngagement: This video is 1 hour and 23 minutes long and is edited in the popular “code-along-with-me” style on YouTube. The first 40 minutes of the video is more akin to a lecture about features and testing individual components Avra is highlighting. This section can be done with the initial pacing of the video. The last 40 minutes focus on building a specific web application, Although, Avra provides pseudocode in his description this section should take an hour and a half to follow along with because the user was encouraged to stop the video to find their own solutions.
 \nURL: https://www.youtube.com/watch?v=0gT_Ro8ijII&t=337s
 """)
+=======
+
+ISTM 705
+
+""")
+>>>>>>> e9552d1a9362cefa18e4a0d148c78f7f179470ce
