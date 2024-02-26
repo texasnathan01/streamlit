@@ -6,7 +6,7 @@ from skimage.transform import swirl
 from skimage.color import rgb2gray
 from PIL import Image
 
-cam_num = st.text_input("Camera Number: ")
+cam_num = st.text_input("Camera Number: ", value="0")
 
 def get_video(swirl_strength, threshold, edge):
 
