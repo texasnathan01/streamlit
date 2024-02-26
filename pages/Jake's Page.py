@@ -77,6 +77,6 @@ if start_button_pressed | sobel_pressed | grey_pressed | swirl_pressed:
     cap = cv2.VideoCapture(0)
     get_video(swirl_strength, threshold, edge)
 
-if cv2.waitKey(1) & 0xFF == ord("q") or stop_button_pressed:
+if stop_button_pressed:
     st.text("The video has stopped")
     frame_placeholder.image("Crazy Camera Landing.png", channels="RGB")
